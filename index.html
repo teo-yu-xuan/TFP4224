@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    .welcome-container {
+      background: rgba(255,255,255,0.85);
+      border-radius: 24px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+      padding: 48px 64px;
+      text-align: center;
+      animation: fadeInUp 1.2s cubic-bezier(.23,1.02,.73,1.01);
+    }
+    .welcome-title {
+      font-size: 2.8rem;
+      font-weight: bold;
+      color: #2d3a4b;
+      margin-bottom: 16px;
+      letter-spacing: 2px;
+      animation: popIn 1s 0.5s backwards;
+    }
+    .welcome-message {
+      font-size: 1.3rem;
+      color: #4b5d6b;
+      margin-bottom: 32px;
+      animation: fadeIn 1.2s 1s backwards;
+    }
+    .pulse {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      background: #66a6ff;
+      border-radius: 50%;
+      margin-top: 16px;
+      animation: pulse 1.5s infinite;
+      box-shadow: 0 0 0 0 #66a6ff80;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    @keyframes popIn {
+      0% { opacity: 0; transform: scale(0.7);}
+      100% { opacity: 1; transform: scale(1);}
+    }
+    @keyframes fadeIn {
+      from { opacity: 0;}
+      to { opacity: 1;}
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 #66a6ff80;}
+      70% { box-shadow: 0 0 0 24px #66a6ff00;}
+      100% { box-shadow: 0 0 0 0 #66a6ff00;}
+    }
+  </style>
+</head>
+<body>
+  <div class="welcome-container">
+    <div class="welcome-title">Welcome to My Page!</div>
+    <div class="welcome-message">
+      We're glad to have you here.<br>
+      Enjoy exploring and have a wonderful day!
+    </div>
+    <div class="pulse"></div>
+  </div>
