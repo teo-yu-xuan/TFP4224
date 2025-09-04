@@ -7,12 +7,12 @@
   <style>
     body {
       margin: 0;
-      height: 100vh;
+      min-height: 100vh;
       background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
       display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
+      overflow-x: hidden;
       font-family: 'Segoe UI', Arial, sans-serif;
     }
     .welcome-container {
@@ -22,6 +22,8 @@
       padding: 48px 64px;
       text-align: center;
       animation: fadeInUp 1.2s cubic-bezier(.23,1.02,.73,1.01);
+      max-width: 95vw;
+      width: 420px;
     }
     .welcome-title {
       font-size: 2.8rem;
@@ -81,6 +83,7 @@
       letter-spacing: 1px;
       box-shadow: 0 -2px 16px #66a6ff22;
       animation: fadeInFooter 1.2s 2.5s backwards;
+      z-index: 10;
     }
     .footer-date {
       font-weight: 500;
@@ -121,6 +124,40 @@
     @keyframes datePulse {
       from { color: #66a6ff; }
       to { color: #2d3a4b; }
+    }
+    @media (max-width: 600px) {
+      .welcome-container {
+        padding: 24px 8vw;
+        width: 98vw;
+        max-width: 98vw;
+        border-radius: 16px;
+      }
+      .welcome-title {
+        font-size: 2rem;
+      }
+      .welcome-message {
+        font-size: 1rem;
+      }
+      .pulse {
+        width: 40px;
+        height: 40px;
+      }
+      .success-icon {
+        width: 48px;
+        height: 48px;
+      }
+      .footer {
+        font-size: 1rem;
+        padding: 10px 0;
+      }
+    }
+    @media (max-width: 400px) {
+      .welcome-title {
+        font-size: 1.3rem;
+      }
+      .welcome-message {
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
