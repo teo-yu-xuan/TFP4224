@@ -47,6 +47,27 @@
       animation: pulse 1.5s infinite;
       box-shadow: 0 0 0 0 #66a6ff80;
     }
+    .success-message {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeInSuccess 1.2s 1.5s backwards;
+    }
+    .success-icon {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 12px;
+      animation: bounceIn 1s 1.7s backwards;
+    }
+    .success-text {
+      font-size: 1.2rem;
+      color: #4BB543;
+      font-weight: 600;
+      letter-spacing: 1px;
+      animation: fadeIn 1.2s 2s backwards;
+      text-shadow: 0 2px 8px #4bb54322;
+    }
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(40px);}
       to { opacity: 1; transform: translateY(0);}
@@ -64,6 +85,15 @@
       70% { box-shadow: 0 0 0 24px #66a6ff00;}
       100% { box-shadow: 0 0 0 0 #66a6ff00;}
     }
+    @keyframes fadeInSuccess {
+      from { opacity: 0; transform: translateY(30px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    @keyframes bounceIn {
+      0% { opacity: 0; transform: scale(0.5);}
+      60% { opacity: 1; transform: scale(1.2);}
+      100% { opacity: 1; transform: scale(1);}
+    }
   </style>
 </head>
 <body>
@@ -74,4 +104,13 @@
       Enjoy exploring and have a wonderful day!
     </div>
     <div class="pulse"></div>
+    <div class="success-message">
+      <svg class="success-icon" viewBox="0 0 64 64" fill="none">
+        <circle cx="32" cy="32" r="30" stroke="#4BB543" stroke-width="4" />
+        <path d="M18 34L28 44L46 22" stroke="#4BB543" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="success-text">Project cloned successfully from GitHub!</div>
+    </div>
   </div>
+</body>
+</html>
